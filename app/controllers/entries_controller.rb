@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
+  http_basic_authenticate_with name: "jakarta", password: "dfrebiubilfaiw23y48923894yfhkuawhsfubergf2gt9p24bfilubksbdiugreui", except: [:new, :create]
 
   # GET /entries
   # GET /entries.json
@@ -28,11 +29,9 @@ class EntriesController < ApplicationController
 
     respond_to do |format|
       if @entry.save
-        format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
-        format.json { render :show, status: :created, location: @entry }
+        format.html { redirect_to 'http://livejasmin.com' }
       else
         format.html { render :new }
-        format.json { render json: @entry.errors, status: :unprocessable_entity }
       end
     end
   end
