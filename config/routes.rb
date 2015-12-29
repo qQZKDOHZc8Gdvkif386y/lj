@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :responses
+  resources :entries
   root 'main#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
